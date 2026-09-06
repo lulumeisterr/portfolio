@@ -1,48 +1,11 @@
-const hasClickedBtnInitial = document.getElementById('id-btn');
-const enableTextExperience = document.getElementById('experience-text');
-const disableTextAboutMe = document.getElementById('about-me-text');
-const titleCard = document.getElementById('title-card');
-const emailBtn = document.getElementById('email-btn');
-const introBackGround = document.getElementById('intro');
-const hasClickedBtnProfile = document.getElementById('id-btn-profile');
-const mediaQuery = window.matchMedia('(max-width: 600px)');
-let isClicked = false;
-emailBtn.addEventListener('click', () => {
-    window.location.href = 'mailto:lucasrodriguesdonascimento@outlook.com?subject=Olá%20do%20meu%20portfólio';
-});
-hasClickedBtnProfile.addEventListener('click', (event) => {
-    disableTextAboutMe.style.display = "block";
-    enableTextExperience.style.display = "none";
-    titleCard.textContent = 'Sobre'
-    titleCard.style.textAlign = "unset"
-    introBackGround.style.backgroundColor = "#ededed"
-    hasClickedBtnProfile.style.display = 'none';
-    hasClickedBtnInitial.style.display = "initial";
-    isClicked = false;
-});
-hasClickedBtnInitial.addEventListener('click', (event) => {
-    window.scrollTo(0, 0);
-    if (!isClicked) {
-        disableTextAboutMe.style.display = "none";
-        enableTextExperience.style.display = "grid";
-        titleCard.textContent = "Experiências"
-        titleCard.style.textAlign = "center"
-        introBackGround.style.backgroundColor = "#ffff";
-        isClicked = true;
-        if (!mediaQuery.matches) {
-            hasClickedBtnInitial.style.display = "none";
-            hasClickedBtnProfile.style.display = 'block';
-            hasClickedBtnInitial.textContent = "Experiências";
-            return;
-        }
-        hasClickedBtnInitial.textContent = "Sobre";
-        return;
-    }
-    disableTextAboutMe.style.display = "block";
-    enableTextExperience.style.display = "none";
-    titleCard.textContent = 'Sobre'
-    titleCard.style.textAlign = "unset"
-    introBackGround.style.backgroundColor = "#ededed"
-    hasClickedBtnInitial.textContent = "Experiências";
-    isClicked = false;
-});
+const header=document.querySelector('[data-header]');
+const menuButton=document.querySelector('[data-menu-toggle]');
+const navLinks=document.querySelector('[data-nav-links]');
+const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.querySelector('[data-year]').textContent=new Date().getFullYear();
+const updateHeader=()=>header.classList.toggle('is-scrolled',window.scrollY>12);
+updateHeader();
+window.addEventListener('scroll',updateHeader,{passive:true});
+menuButton.addEventListener('click',()=>{const isOpen=menuButton.getAttribute('aria-expanded')==='true';menuButton.setAttribute('aria-expanded',String(!isOpen));menuButton.querySelector('.sr-only').textContent=isOpen?'Abrir menu':'Fechar menu';navLinks.classList.toggle('is-open',!isOpen)});
+navLinks.addEventListener('click',event=>{if(event.target.closest('a')){menuButton.setAttribute('aria-expanded','false');menuButton.querySelector('.sr-only').textContent='Abrir menu';navLinks.classList.remove('is-open')}});
+if(reduceMotion||!('IntersectionObserver'in window)){document.querySelectorAll('.reveal').forEach(element=>element.classList.add('is-visible'))}else{const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}})},{threshold:.12,rootMargin:'0px 0px -40px'});document.querySelectorAll('.reveal').forEach(element=>observer.observe(element))}

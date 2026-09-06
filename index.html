@@ -1,138 +1,484 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <main class="container">
-        <section class="me">
-            <img class="image-profile" src="./assets/images/perfil.jpg" alt="foto-de-perfil"></img>
-            <h1>Lucas Rodrigues</h1>
-            <span>Software Engineer</span>
-            <span>Osasco, São Paulo, Brasil</span>
-            <span>1998</span>
-            <div class="social-media">
-               <img style="cursor: pointer;" id="email-btn" src="./assets/icones/icons8-email.svg" alt="icone-de-email"></img>
-               <a href="https://www.linkedin.com/in/lulumeister/"><img src="./assets/icones/icons8-linkedin.svg" alt="Linkedin"></img></a>
-               <a href="https://github.com/lulumeisterr" ><img src="./assets/icones/icons8-github.svg" alt="Github"></img></a>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfólio de Lucas Rodrigues, Principal Engineer especializado em arquitetura de software, sistemas distribuídos, cloud e modernização de plataformas críticas."
+    />
+    <meta name="theme-color" content="#07111f" />
+    <title>Lucas Rodrigues | Principal Engineer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header" data-header>
+      <nav class="nav shell" aria-label="Navegação principal">
+        <a class="brand" href="#inicio" aria-label="Lucas Rodrigues, início"
+          ><span class="brand-mark">LR</span
+          ><span class="brand-text">Lucas Rodrigues</span></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-links"
+          data-menu-toggle
+        >
+          <span class="sr-only">Abrir menu</span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-links" data-nav-links>
+          <a href="#perfil">Perfil</a><a href="#atuacao">Atuação</a
+          ><a href="#trajetoria">Trajetória</a><a href="#stack">Stack</a
+          ><a class="nav-cta" href="#contato">Vamos conversar</a>
+        </div>
+      </nav>
+    </header>
+    <main id="conteudo">
+      <section class="hero shell" id="inicio">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">
+            <span class="status-dot"></span> Principal Engineer @ B3
+          </p>
+          <h1>Arquitetura para sistemas que <span>não podem parar.</span></h1>
+          <p class="hero-lead">
+            Atuo na interseção entre arquitetura de software, modernização de
+            plataformas e engenharia hands-on em ambientes críticos do mercado
+            financeiro.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#atuacao"
+              >Conheça meu trabalho <span aria-hidden="true">↘</span></a
+            >
+            <a
+              class="button button-ghost"
+              href="mailto:lucasrodriguesdonascimento@outlook.com"
+              >Enviar e-mail</a
+            >
+          </div>
+          <ul class="hero-meta" aria-label="Informações rápidas">
+            <li><span>Base</span> São Paulo, Brasil</li>
+            <li><span>Foco</span> Software Architecture</li>
+            <li><span>Domínio</span> Mercado financeiro</li>
+          </ul>
+        </div>
+        <aside
+          class="profile-card reveal"
+          aria-label="Perfil de Lucas Rodrigues"
+        >
+          <div class="portrait-wrap">
+            <img
+              src="./assets/images/perfil.jpg"
+              alt="Retrato de Lucas Rodrigues"
+              width="800"
+              height="800"
+            />
+            <span class="portrait-label">Engineering<br />with context.</span>
+          </div>
+          <div class="profile-card-footer">
+            <p>
+              Transformo regras de negócio complexas em decisões técnicas
+              simples, confiáveis e evolutivas.
+            </p>
+            <div class="social-links">
+              <a
+                href="https://www.linkedin.com/in/luccas1"
+                target="_blank"
+                rel="noreferrer"
+                >LinkedIn <span aria-hidden="true">↗</span></a
+              ><a
+                href="https://github.com/lulumeisterr"
+                target="_blank"
+                rel="noreferrer"
+                >GitHub <span aria-hidden="true">↗</span></a
+              >
             </div>
-            <button style="margin-top: 3%; display: none;" type="button" id="id-btn-profile" class="btn">Sobre</button>
-        </section>
-        <section class="intro" id="intro">
-            <h1 id="title-card">Sobre</h1>
-            <div id="about-me-text">
+          </div>
+        </aside>
+      </section>
+      <section class="metrics shell" aria-label="Destaques profissionais">
+        <article>
+          <strong>2018</strong
+          ><span>Início da trajetória em engenharia de software</span>
+        </article>
+        <article>
+          <strong>5+</strong
+          ><span>Anos construindo produtos e plataformas na B3</span>
+        </article>
+        <article>
+          <strong>3 clouds</strong><span>Experiência com AWS, Azure e OCI</span>
+        </article>
+        <article>
+          <strong>IA aplicada</strong
+          ><span
+            >Contexto do sistema, histórico, especificações e limites para
+            apoiar a engenharia</span
+          >
+        </article>
+      </section>
+      <section class="section profile-section" id="perfil">
+        <div class="shell profile-layout">
+          <div class="section-heading reveal">
+            <p class="section-index">01 / Perfil</p>
+            <h2>Especialista técnico com <span>visão de contexto.</span></h2>
+          </div>
+          <div class="profile-story reveal">
+            <p class="profile-statement">
+              Atuo como especialista técnico, conectando problemas de negócio à
+              arquitetura e à implementação. Meu foco é gerar impacto por meio
+              de decisões técnicas, desenvolvimento de software e evolução de
+              sistemas complexos.
+            </p>
+            <div class="profile-principles">
+              <article>
+                <span>01</span>
+                <h3>Arquitetura com contexto</h3>
                 <p>
-                    Profissional graduado em Análise e Desenvolvimento de Sistemas pela FIAP, com expertise em Desenvolvimento Full Stack,
-                    aprimorada por meio de um MBA especializado. Possuo experiência em desenvolvimento de sistemas, tanto no backend quanto no
-                    frontend, adaptando-me conforme as demandas. Busco constantemente desafios que me permitam expandir meus horizontes além
-                    das soluções convencionais, sempre em busca de oportunidades que impulsionem meu crescimento profissional contínuo.
+                  Investigo o problema, entendo as restrições e transformo
+                  complexidade de negócio em soluções simples, confiáveis e
+                  evolutivas.
                 </p>
-                <p><span class="hashtag">#graduado</span> 
-                    <span class="hashtag">#Análise e Desenvolvimento de Sistemas</span>
-                    <span class="hashtag">#FIAP</span> 
-                    <span class="hashtag">#Desenvolvimento Full Stack</span> 
-                    <span class="hashtag">#MBA especializado na fiap</span> 
-                    <span class="hashtag">#Experiência em desenvolvimento de sistemas</span> 
-                    <span class="hashtag">#Backend e frontend</span> 
-                    <span class="hashtag">#Adaptabilidade</span> 
-                    <span class="hashtag">#Desafios</span> 
-                    <span class="hashtag">#Soluções inovadoras</span> 
-                    <span class="hashtag">#Crescimento profissional</span>
-                    <span class="hashtag">#5AnosExperiencia</span>
+              </article>
+              <article>
+                <span>02</span>
+                <h3>Ownership técnico</h3>
+                <p>
+                  Assumo responsabilidade pelas decisões e pela qualidade da
+                  entrega, mantendo proximidade com código, produção e operação.
                 </p>
+              </article>
+              <article>
+                <span>03</span>
+                <h3>Influência técnica</h3>
+                <p>
+                  Contribuo por meio de arquitetura, investigação,
+                  compartilhamento de contexto e proximidade com a
+                  implementação.
+                </p>
+              </article>
             </div>
-            <div class="experiencie" id="experience-text" style="display: none;">
-
-                <section class="employe b3">
-                    <li class="list">
-                        <h3 style="color: #002c63;">Bolsa Brasil Balcão</h3>
-                        <p>Responsável pelo desenvolvimento e otimização de relatórios para o Sistema Integrado de Administração de Corretoras
-                        (Sinacor) com a transição de funcionalidades desenvolvidas em Centura para <b>.NET 4.7.2</b>, 
-                        Também liderando melhorias nos módulos do GAP (Gestor de ativos prime) com objetivo de implementar deposito e retirada de título público federal
-                        para os clientes da <b>B3</b>.
-                        Desempenhei um papel fundamental na construção e manutenção do hub balcão na <b>B3</b>, onde fui responsável por diversas
-                        tarefas adicionais, contribuir para o desenvolvimento do sistema, também assumi a responsabilidade de desenhar e
-                        arquiteturar partes de infraestrutura, o que incluiu o entendimento/configuração e integração de componentes-chave, como o Big IP VS/F5(LB) , 
-                        nginx(como proxy reverso), VMS, Message Brokers com Service Bus e Azure queue usando SO red hat 7.6. 
-                        Essa aplicação foi reescrita de Java para .NetCore 6</p>
-                    </li>
-                    <li class="list"><a href="https://www.b3.com.br/data/files/01/35/BA/62/DA9C9710A9F29C97CC0D8AA8/OC%20063-2021%20PRE%20Novos%20Servi%C3%A7os%20para%20Moderniza%C3%A7%C3%A3o%20do%20Fluxo%20de%20Transfer%C3%AAncia%20de%20Vls%20Mobs%20entre%20Agentes...%20STVM%20(P).pdf">Gestor de ativos - Sinacor</a></li>
-                    <li class="list"><a href="https://www.b3.com.br/pt_br/solucoes/plataformas/middle-e-backoffice/hub-balcao/sobre-o-hub-balcao/">Hub Balcão</a></li>
-                </section>
-
-                <section class="employe ntt">
-                    <li class="list">
-                        <h3 style="color: #51821b;">NTT DATA</h3>
-                        <p>Responsavel por integrar soluções de mensageria com as plataformas Infobip e Facebook para clientes 
-                            como <b>Cielo</b> & <b>Unilever</b>, com o propósito de otimizar a
-                        interação com os clientes através do WhatsApp Business e do Messenger (FB). Além disso, foram aplicados recursos
-                        cognitivos baseados em nuvem para mapear os fluxos de atendimento, com o objetivo de aprimorar a experiência do usuário
-                        final utilizando <b>Java EE , Spring Framework , Scripts de relatórios com Python,
-                        Soluções de Inteligência Artificial como Watson IBM e Luis Microsoft a partir de soluções em nuvem da Microsoft (Azure Plataform).</b> 
-                        </p>
-                    </li>
-                    <li class="list"><a href="https://vimeo.com/339116374">Chatbot Interno Cielo Cici</a></li>
-                    <li class="list"><a href="https://www.infobip.com/pt/cliente/kibon#:~:text=A%20evolu%C3%A7%C3%A3o%20do%20uso%20do,empresa%2C%20e%20vice%2Dversa">Chatbot Whatsapp Elo</a></li>
-                </section>
-
-                <section class="employe added">
-                    <li class="list">
-                        <h3 style="color: #055f9b;">Magna Sistemas</h3>
-                        <p>
-                            Como desenvolvedor Java na equipe de sustentação da Porto Seguro, tive a oportunidade de desempenhar
-                            nos sistemas do Soma + Web e Desktop utilizando as tecnologias, 
-                            Java 5, JavaFX 8, EJB 2, JSF 1.2 com Richfaces e Struts 1 e comunicação com webservice SOAP.
-                            ferramentas de controle de versão, como o Rational Concert Team (RTC) da IBM
-                        </p>
-                    </li>
-                </section>
-
-                <section class="employe added">
-                    <li class="list">
-                        <h3 style="color: #ff710f;">Added</h3>
-                        <p>
-                            Como responsável pelo desenvolvimento, ajudei na criação de um sistema web para a <b>Prosegur</b>, utilizando Python em
-                            conjunto com a <b>biblioteca openpyxl.</b> O projeto visava oferecer uma interface intuitiva para a geração de
-                            relatórios
-                            diários, integrando-se de forma direta à base de dados Informix,
-                            Paralelamente, contribuí para o desenvolvimento e aprimoramento de relatórios na plataforma de streaming Vid+/Algar.
-                            Essa experiência demandou a integração com recursos REST em <b>Python</b> fornecidos pela empresa de telecomunicações
-                            Comcast.
-                        </p>
-                    </li>
-                </section>
-
-                <section style="grid-column: 1 / -1">
-                    <h3 style="font-size: 2rem; text-align: center;">Tecnologias</h3>
-                    <div class="tecnologias">
-                        <img src="./assets/icones/icons8-c-afiado-logotipo-2.svg" alt="icone-de-email"></img>
-                        <img src="./assets/icones/icons8-logo-java-coffee-cup.svg" alt="icone-de-email"></img>
-                        <img src="./assets/icones/icons8-python.svg" alt="icone-de-linguagem-programacao-python"></img>
-                        <img src="./assets/icones/icons8-nodejs.svg" alt="icone-de-linguagem-programacao-nodejs"></img>
-                        <img src="./assets/icones/icons8-angular.svg" alt="icone-de-linguagem-programacao-angular"></img>
-                        <img src="./assets/icones/icons8-logo-a-oracle.svg" alt="icone-oracle"></img>
-                        <img src="./assets/icones/icons8-redis.svg" alt="icone-oracle"></img>
-                        <img src="./assets/icones/rabbitmq-icon.svg" alt="icone-rbq"></img>
-                        <img src="./assets/icones/icons8-amazon-web-services.svg" alt="icone-aws"></img>
-                        <img src="./assets/icones/icons8-azure-48.png" alt="icone-azure"></img>
-                    </div>
-                    <h3 style="font-size: 2rem; text-align: center;">Certificações</h3>
-                    <div class="certificacoes">
-                        <li><a href="https://brm-certview.oracle.com/ords/certview/ecertificate?ssn=OC4628713&trackId=OCIF2023CA&key=1a4357ac0df6213b4824f00cca5d730d1cd66aec">Oracle Cloud Infrastructure (OCI)</a></li>
-                        <li><a href="https://my.securityjourney.com/api/certificates/7EP7PgneSqwfcm0w8BZFHb/b3">Security Journey</a></li>
-                        <li><a href="#">SCJP 8</a></li>
-                    </div>
-                </section>
+            <blockquote>
+              “Quero ampliar meu impacto construindo e evoluindo sistemas — com
+              profundidade técnica, autonomia e contexto.”
+            </blockquote>
+          </div>
+        </div>
+      </section>
+      <section class="section shell" id="atuacao">
+        <div class="section-heading reveal">
+          <p class="section-index">02 / Atuação</p>
+          <h2>Decisões técnicas conectadas ao <span>impacto real.</span></h2>
+          <p>
+            Meu trabalho combina visão arquitetural, profundidade técnica e
+            entendimento do negócio para evoluir sistemas de alta criticidade
+            sem perder a capacidade de entrega.
+          </p>
+        </div>
+        <div class="expertise-grid">
+          <article class="expertise-card featured reveal">
+            <span class="card-number">01</span>
+            <h3>Arquitetura & modernização</h3>
+            <p>
+              Evolução incremental de legados, desenho de soluções distribuídas
+              e migrações que equilibram continuidade operacional, simplicidade
+              e capacidade de mudança.
+            </p>
+            <ul class="inline-tags">
+              <li>Hexagonal</li>
+              <li>CQRS</li>
+              <li>BFF</li>
+              <li>Microservices</li>
+            </ul>
+          </article>
+          <article class="expertise-card reveal">
+            <span class="card-number">02</span>
+            <h3>Sistemas críticos</h3>
+            <p>
+              Projetei e evoluí sistemas que processam milhares de mensagens
+              por segundo, aplicando concorrência, processamento assíncrono e
+              otimização de consultas para preservar vazão e previsibilidade
+              do tempo de processamento.
+            </p>
+            <p class="card-evidence">
+              Concorrência · processamento em segundo plano · consultas
+              performáticas
+            </p>
+            <ul class="inline-tags">
+              <li>Kafka</li>
+              <li>RabbitMQ</li>
+              <li>SQL Server</li>
+              <li>Oracle</li>
+            </ul>
+          </article>
+          <article class="expertise-card reveal">
+            <span class="card-number">03</span>
+            <h3>Cloud & observabilidade</h3>
+            <p>
+              Infraestrutura e operação orientadas à resiliência, com telemetria
+              útil para diagnosticar, aprender e melhorar continuamente.
+            </p>
+            <ul class="inline-tags">
+              <li>Kubernetes</li>
+              <li>OpenShift</li>
+              <li>OpenTelemetry</li>
+              <li>Prometheus</li>
+            </ul>
+          </article>
+          <article class="expertise-card accent reveal">
+            <span class="card-number">04</span>
+            <h3>Desenvolvimento orientado por IA</h3>
+            <p>
+              Estruturo agentes e pipelines baseados em LLM que analisam código,
+              arquitetura e decisões técnicas, alimentando uma base de
+              conhecimento versionada e conectada ao contexto de negócio.
+            </p>
+            <p class="card-evidence">
+              Histórico vivo · apoio ao onboarding · especificações e limites
+              para respostas alinhadas ao projeto
+            </p>
+            <div class="card-signal" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span>
             </div>
-            <button style="margin-top: 3%;" type="button" id="id-btn" class="btn">Experiências</button>
-        </section>
+          </article>
+        </div>
+      </section>
+      <section class="section experience-section" id="trajetoria">
+        <div class="shell">
+          <div class="section-heading split reveal">
+            <div>
+              <p class="section-index">03 / Trajetória</p>
+              <h2>
+                Experiência construída em <span>contextos complexos.</span>
+              </h2>
+            </div>
+            <p>
+              Uma seleção dos capítulos que melhor representam minha evolução de
+              desenvolvedor back-end a Principal Engineer.
+            </p>
+          </div>
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <div class="timeline-meta">
+                <span>2021 — hoje</span><strong>B3</strong>
+              </div>
+              <div class="timeline-content">
+                <h3>De desenvolvedor a referência técnica</h3>
+                <p>
+                  Entrei em um sistema de pós-negociação durante uma transição
+                  do time e precisei absorver rapidamente regras de negócio,
+                  arquitetura e rotinas de produção. Assumi a continuidade de
+                  implementações e correções e ampliei minha visão para além do
+                  código.
+                </p>
+                <p>
+                  Com o tempo, passei a conectar negócio, tecnologia e suporte à
+                  produção, tornando-me referência para decisões técnicas,
+                  evolução do legado e construção de novas soluções.
+                </p>
+                <p class="context">
+                  Atuação atual: Principal Engineer · iMercado · Liquidação
+                  Financeira · Empréstimo de Ativos · Pré-Matching · Ficha
+                  Cadastral
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="timeline-meta">
+                <span>2019 — 2021</span><strong>Everis / NTT DATA</strong>
+              </div>
+              <div class="timeline-content">
+                <h3>Desenvolvedor Back-end Java</h3>
+                <p>
+                  Integrações multicanal e soluções cognitivas em nuvem para
+                  experiências de atendimento de grandes marcas, conectando
+                  demandas de clientes e times internacionais.
+                </p>
+                <p class="context">
+                  Java · Spring · Azure · IBM Watson · Microsoft LUIS · Redis
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="timeline-meta">
+                <span>2018 — 2019</span><strong>Magna / Added</strong>
+              </div>
+              <div class="timeline-content">
+                <h3>Engenharia back-end & integrações</h3>
+                <p>
+                  Sustentação de sistemas Java para seguros e automação de
+                  relatórios com Python, incluindo levantamento de requisitos e
+                  integração de APIs.
+                </p>
+                <p class="context">
+                  Java · Python · REST · SOAP · Informix · PostgreSQL
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section shell" id="stack">
+        <div class="section-heading reveal">
+          <p class="section-index">04 / Stack</p>
+          <h2>Profundidade em mais de um <span>ecossistema.</span></h2>
+          <p>
+            Experiência prática com plataformas modernas e legadas, da aplicação
+            à infraestrutura e integração.
+          </p>
+        </div>
+        <div class="capability-grid">
+          <article class="capability-card reveal">
+            <header>
+              <span>Ecossistema</span>
+              <h3>Java</h3>
+              <p>Java 8, 9 e 11</p>
+            </header>
+            <details open>
+              <summary>Aplicação & frameworks</summary>
+              <ul>
+                <li>Java EE / Jakarta EE</li>
+                <li>EJB, JAX-RS e JAX-WS</li>
+                <li>Spring MVC 3/4</li>
+                <li>Spring Security + JWT</li>
+                <li>Spring Data, Batch e Actuator</li>
+                <li>Spring Cloud e service discovery com Eureka</li>
+              </ul>
+            </details>
+            <details>
+              <summary>Persistência & interfaces</summary>
+              <ul>
+                <li>JDBC, JPA e Hibernate</li>
+                <li>JavaFX</li>
+                <li>JSF 2 e RichFaces</li>
+                <li>JSP e Struts</li>
+              </ul>
+            </details>
+          </article>
+          <article class="capability-card highlight reveal">
+            <header>
+              <span>Ecossistema</span>
+              <h3>.NET</h3>
+              <p>.NET 6, 8 e 10 · .NET Framework 4.7.2</p>
+            </header>
+            <details open>
+              <summary>Aplicação & arquitetura</summary>
+              <ul>
+                <li>ASP.NET, Windows Services e IIS</li>
+                <li>Entity Framework 6, EF Core, Dapper e ADO.NET</li>
+                <li>MVC e CQRS com MediatR</li>
+                <li>Arquitetura em camadas e arquitetura hexagonal</li>
+                <li>API Gateway com Ocelot e integração com service discovery</li>
+                <li>Proxy reverso com Nginx</li>
+              </ul>
+            </details>
+            <details>
+              <summary>Azure & integração</summary>
+              <ul>
+                <li>Azure IaaS e Key Vault</li>
+                <li>Azure Blob Storage</li>
+                <li>Azure Service Bus</li>
+                <li>Azure App Service / Web Apps</li>
+                <li>SQL Server e Oracle</li>
+              </ul>
+            </details>
+            <details>
+              <summary>OpenShift & escalabilidade</summary>
+              <ul>
+                <li>Implantação e operação com Deployments e pods</li>
+                <li>Escalabilidade horizontal com HPA baseado em métricas</li>
+                <li>Descoberta de serviços e distribuição interna com Services</li>
+                <li>Exposição externa com Routes e Ingress Controller</li>
+                <li>Integração com load balancers de infraestrutura</li>
+              </ul>
+            </details>
+          </article>
+        </div>
+        <div
+          class="platform-matrix reveal"
+          aria-label="Experiência em plataforma"
+        >
+          <article>
+            <h3>Dados</h3>
+            <p>MySQL</p>
+            <p>FoundationDB</p>
+            <p>Oracle / PL/SQL</p>
+            <p>Informix</p>
+            <p>Redis</p>
+            <p>H2</p>
+          </article>
+          <article>
+            <h3>Cloud</h3>
+            <p>AWS EC2, S3 e API Gateway</p>
+            <p>Lambda, DynamoDB e SAM</p>
+            <p>Azure IaaS, Web App e Storage</p>
+            <p>GCP Compute Engine</p>
+          </article>
+          <article>
+            <h3>Mensageria & protocolos</h3>
+            <p>Kafka</p>
+            <p>RabbitMQ</p>
+            <p>MQTT</p>
+            <p>Azure Service Bus</p>
+            <p>Azure Storage Queue</p>
+          </article>
+          <article>
+            <h3>Plataforma</h3>
+            <p>Docker</p>
+            <p>Kubernetes / OpenShift</p>
+            <p>OpenTelemetry</p>
+            <p>Prometheus</p>
+            <p>Loki e Tempo</p>
+          </article>
+        </div>
+        <div class="education-note reveal">
+          <span>Formação</span>
+          <p>
+            MBA em Desenvolvimento Full Stack com Microservices, Nuvem e IoT ·
+            FIAP
+          </p>
+          <p>Análise e Desenvolvimento de Sistemas · FIAP</p>
+        </div>
+      </section>
+      <section class="contact-section" id="contato">
+        <div class="shell contact-inner reveal">
+          <p class="section-index">05 / Contato</p>
+          <h2>
+            Tem um problema complexo para <span>transformar em software?</span>
+          </h2>
+          <a
+            class="contact-email"
+            href="mailto:lucasrodriguesdonascimento@outlook.com"
+            >lucasrodriguesdonascimento@outlook.com
+            <span aria-hidden="true">↗</span></a
+          >
+          <div class="contact-actions" aria-label="Outras formas de contato">
+            <a
+              href="https://www.linkedin.com/in/luccas1"
+              target="_blank"
+              rel="noreferrer"
+              ><span>LinkedIn</span><strong>Perfil profissional</strong><i aria-hidden="true">↗</i></a
+            >
+            <a
+              href="https://github.com/lulumeisterr"
+              target="_blank"
+              rel="noreferrer"
+              ><span>GitHub</span><strong>Projetos e código</strong><i aria-hidden="true">↗</i></a
+            >
+          </div>
+          <div class="contact-footer">
+            <p>
+              São Paulo, Brasil · Disponível para boas conversas sobre
+              arquitetura e engenharia.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer style="margin: 0 auto;">
-        <p style="text-align: center;"><b>Developed by @Lucas Rodrigues</b></p>
+    <footer class="footer shell">
+      <p>© <span data-year></span> Lucas Rodrigues</p>
+      <a href="#inicio">Voltar ao topo ↑</a>
     </footer>
     <script src="./scripts/script.js"></script>
-</body>
+  </body>
 </html>
